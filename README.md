@@ -4,7 +4,12 @@
 ╔═══════════════════════════════════════════════════════╗
 ║        EXPENSE MANAGEMENT SYSTEM  💸                  ║
 ║        Track · Analyse · Control                      ║
-╚═══════════════════════════════════════════════════════╝
+╚══════<img width="1087" height="763" alt="app_frontend_ui" src="https://github.com/user-attachments/assets/87166578-b92a-4f6b-9fb6-803722a01ec4" /><img width="1137" height="731" alt="analytics_ui_demo1" src="https://github.com/user-attachments/assets/9b640807-f7a1-4af1-9fb5-1e0678f12883" />
+[requirements.txt](https://github.com/user-attachments/files/29168617/requirements.txt)
+[README.md](https://github.com/user-attachments/files/29168616/README.md)
+═════════════════════════════════════════════════╝
+<img width="625" height="543" alt="analytics_ui_demo2" src="https://github.com/user-attachments/assets/b77bb491-53f2-4580-a69b-aa69eda99f54" />
+
 ```
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
