@@ -2,7 +2,7 @@
 
 ```
 ╔═══════════════════════════════════════════════════════╗
-║        EXPENSE MANAGEMENT SYSTEM  💸                  ║
+║        EXPENSE TRACKING SYSTEM  💸                    ║
 ║        Track · Analyse · Control                      ║
 ╚═══════════════════════════════════════════════════════╝
 ```
@@ -15,13 +15,11 @@
 
 > **A full-stack expense tracking platform** — real-time REST API backend powered by FastAPI, paired with an interactive Streamlit dashboard. Built to demonstrate clean architecture, async Python, and production-ready API design.
 
----
-
-<img src="app_frontend_ui.png" alt="App Frontend UI" width="700"/>
+<img src="https://raw.githubusercontent.com/mskiran05-cyber/Expense-Tracking-System/main/app_frontend_ui.png" alt="App Frontend UI" width="700"/>
 
 ---
 
-[Features](#-features) · [Architecture](#-architecture) · [Quick Start](#-quick-start) · [API Reference](#-api-reference) · [Project Structure](#-project-structure) · [Tests](#-tests)
+[Features](#-features) · [Architecture](#-architecture) · [Screenshots](#-screenshots) · [Quick Start](#-quick-start) · [API Reference](#-api-reference) · [Project Structure](#-project-structure) · [Tests](#-tests)
 
 </div>
 
@@ -76,7 +74,7 @@ Most expense trackers are CRUD wrappers. This one is built with **separation of 
 
 | Frontend UI | Analytics Demo 1 | Analytics Demo 2 |
 |:-----------:|:----------------:|:----------------:|
-| <img src="app_frontend_ui.png" width="250" alt="Frontend UI"/> | <img src="analytics_ui_demo1.png" width="250" alt="Analytics Demo 1"/> | <img src="analytics_ui_demo2.png" width="250" alt="Analytics Demo 2"/> |
+| <img src="https://raw.githubusercontent.com/mskiran05-cyber/Expense-Tracking-System/main/app_frontend_ui.png" width="250" alt="Frontend UI"/> | <img src="https://raw.githubusercontent.com/mskiran05-cyber/Expense-Tracking-System/main/analytics_ui_demo1.png" width="250" alt="Analytics Demo 1"/> | <img src="https://raw.githubusercontent.com/mskiran05-cyber/Expense-Tracking-System/main/analytics_ui_demo2.png" width="250" alt="Analytics Demo 2"/> |
 
 ---
 
@@ -87,8 +85,8 @@ Most expense trackers are CRUD wrappers. This one is built with **separation of 
 ### 1 — Clone
 
 ```bash
-git clone https://github.com/yourusername/expense-management-system.git
-cd expense-management-system
+git clone https://github.com/mskiran05-cyber/Expense-Tracking-System.git
+cd Expense-Tracking-System
 ```
 
 ### 2 — Install dependencies
@@ -119,20 +117,24 @@ streamlit run frontend/app.py
 ## 📁 Project Structure
 
 ```
-expense-management-system/
+Expense-Tracking-System/
 │
 ├── frontend/
-│   └── app.py              # Streamlit dashboard & visualisations
+│   └── app.py                      # Streamlit dashboard & visualisations
 │
 ├── backend/
-│   └── server/
-│       └── server.py       # FastAPI app, routes, and data models
+│   ├── server.py                   # FastAPI app, routes, and data models
+│   ├── db_helper.py                # Database queries and helpers
+│   └── logging_setup.py           # Logging configuration
 │
 ├── tests/
-│   ├── test_backend.py     # API endpoint tests (pytest)
-│   └── test_frontend.py    # Frontend logic tests
+│   ├── test_db_helper.py           # Database layer tests (pytest)
+│   └── conftest.py                 # Pytest fixtures and config
 │
-├── requirements.txt        # All Python dependencies
+├── analytics_ui_demo1.png          # Analytics screenshot 1
+├── analytics_ui_demo2.png          # Analytics screenshot 2
+├── app_frontend_ui.png             # Frontend UI screenshot
+├── requirements.txt                # All Python dependencies
 └── README.md
 ```
 
@@ -155,12 +157,14 @@ Once the server is running, full interactive docs are at **`http://localhost:800
 ```bash
 curl -X POST "http://localhost:8000/expenses" \
      -H "Content-Type: application/json" \
-     -d '{"title": "Lunch", "amount": 18.50, "category": "Food", "date": "2024-06-01"}'
+     -d '{"title": "Lunch", "amount": 18.50, "category": "Food", "date": "2024-08-15"}'
 ```
 
 ---
 
 ## 🧪 Tests
+
+Tests live in the `tests/` folder and cover the database helper layer and API endpoints.
 
 ```bash
 # Run the full test suite
@@ -169,9 +173,17 @@ pytest tests/
 # Run with verbose output
 pytest tests/ -v
 
-# Run only backend tests
-pytest tests/test_backend.py
+# Run only db_helper tests
+pytest tests/test_db_helper.py
 ```
+
+**What's tested:**
+
+| Test | Description |
+|------|-------------|
+| `test_fetch_expenses_for_date_aug_15` | Fetches expenses for a known date, checks amount + category + notes |
+| `test_fetch_expenses_for_date_invalid_date` | Returns empty list for a future date with no data |
+| `test_fetch_expense_summary_invalid_range` | Returns empty summary for an out-of-range date window |
 
 ---
 
@@ -181,9 +193,10 @@ This project was built to showcase:
 
 - ✅ **REST API design** with FastAPI — clean routing, Pydantic models, HTTP status codes
 - ✅ **Async Python** — non-blocking request handling with Uvicorn
+- ✅ **Database integration** — `db_helper.py` abstracts all DB queries cleanly
 - ✅ **Frontend/backend separation** — decoupled layers communicating over HTTP
 - ✅ **Data visualisation** — Streamlit charts and interactive filters
-- ✅ **Testing discipline** — pytest for both layers
+- ✅ **Testing discipline** — pytest with real data assertions across multiple scenarios
 - ✅ **Clean project structure** — immediately navigable for any new contributor
 
 ---
@@ -207,9 +220,12 @@ Install everything at once: `pip install -r requirements.txt`
 
 **Built with Python · FastAPI · Streamlit**
 
-If this project was useful, a ⭐ on GitHub goes a long way.
+⭐ If this project was useful, a star on GitHub goes a long way.
+
+[github.com/mskiran05-cyber/Expense-Tracking-System](https://github.com/mskiran05-cyber/Expense-Tracking-System)
 
 </div>
+
 
 
 **Built with Python · FastAPI · Streamlit**
