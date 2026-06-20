@@ -4,12 +4,7 @@
 ╔═══════════════════════════════════════════════════════╗
 ║        EXPENSE MANAGEMENT SYSTEM  💸                  ║
 ║        Track · Analyse · Control                      ║
-╚══════<img width="1087" height="763" alt="app_frontend_ui" src="https://github.com/user-attachments/assets/87166578-b92a-4f6b-9fb6-803722a01ec4" /><img width="1137" height="731" alt="analytics_ui_demo1" src="https://github.com/user-attachments/assets/9b640807-f7a1-4af1-9fb5-1e0678f12883" />
-[requirements.txt](https://github.com/user-attachments/files/29168617/requirements.txt)
-[README.md](https://github.com/user-attachments/files/29168616/README.md)
-═════════════════════════════════════════════════╝
-<img width="625" height="543" alt="analytics_ui_demo2" src="https://github.com/user-attachments/assets/b77bb491-53f2-4580-a69b-aa69eda99f54" />
-
+╚═══════════════════════════════════════════════════════╝
 ```
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -19,6 +14,10 @@
 ![Status](https://img.shields.io/badge/Status-Active-22C55E?style=for-the-badge)
 
 > **A full-stack expense tracking platform** — real-time REST API backend powered by FastAPI, paired with an interactive Streamlit dashboard. Built to demonstrate clean architecture, async Python, and production-ready API design.
+
+---
+
+<img src="app_frontend_ui.png" alt="App Frontend UI" width="700"/>
 
 ---
 
@@ -70,6 +69,14 @@ Most expense trackers are CRUD wrappers. This one is built with **separation of 
 │   /docs      Swagger UI (auto-generated)            │
 └─────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 📸 Screenshots
+
+| Frontend UI | Analytics Demo 1 | Analytics Demo 2 |
+|:-----------:|:----------------:|:----------------:|
+| <img src="app_frontend_ui.png" width="250" alt="Frontend UI"/> | <img src="analytics_ui_demo1.png" width="250" alt="Analytics Demo 1"/> | <img src="analytics_ui_demo2.png" width="250" alt="Analytics Demo 2"/> |
 
 ---
 
@@ -197,6 +204,13 @@ Install everything at once: `pip install -r requirements.txt`
 ---
 
 <div align="center">
+
+**Built with Python · FastAPI · Streamlit**
+
+If this project was useful, a ⭐ on GitHub goes a long way.
+
+</div>
+
 
 **Built with Python · FastAPI · Streamlit**
 
